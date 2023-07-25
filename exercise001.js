@@ -12,3 +12,27 @@ const promise = new Promise((resolve, reject) => {
 });
 
 // Your solution(s) to exercise001 here!
+// use then and catch
+// promise.then(
+// 	(result) => {
+// 	  console.log(`Yay! Promise resolved with response: `, result);
+// 	},
+// 	(error) => {
+// 	  console.error(`Boo. Promise rejected with response: `, error);
+// 	}
+//   );
+
+
+  // use asyn/await
+  async function handlePromise(){
+	try {
+		const result = await promise;
+		console.log(`Yay! Promise resolved with response: `,result); //success try block executed
+	
+	} catch (error) {
+		console.error(`Boo. Promise rejected with response: `, error); // failed catch block executed.
+	
+		
+	}
+  }
+  handlePromise();
